@@ -1,0 +1,28 @@
+table{
+    text-align: center;
+    border-collapse:collapse ;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+table td , table th{
+    text-align: center;
+    border: 1px solid rgb(94, 90, 90);
+    padding: 10px;
+    min-height: 180px
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+button{
+    border: 1px solid  rgb(54, 152, 227) ;
+    background-color:  rgb(54, 152, 227);
+    padding: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.text-product{
+    font-size: 30px;
+    font-weight: bold;
+    color:  rgb(54, 152, 227) ;
+}

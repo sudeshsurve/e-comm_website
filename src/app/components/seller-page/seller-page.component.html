@@ -1,0 +1,33 @@
+<div class="container mt-5"> 
+  <h3 class="text-product">Product List</h3>
+   <p class="text-danger">{{deletemsg}}</p>
+ <table *ngIf="p_length >= 1">
+<thead>
+    <tr>
+        <th>Image</th>
+        <th>Product Name</th>
+        <th>Prize</th>
+        <th>Color</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let item of p_service.products">
+        <td><img [src]="item.p_img"></td>
+        <td>{{item.p_name}}</td>
+        <td>{{item.p_prize | currency :'INR'}}</td>
+        <td>{{item.p_color}}</td>
+        <td class="inverse">{{item.p_description}}</td>
+        <td>
+            <div class="d-flex justify-content-center gap-3 ">
+             <button routerLink="/seller-update-product" [queryParams]="{id:item.id}" >Edit</button>
+        <button (click)="remove_product(item.id)">Delete</button>    
+            </div>
+           
+        </td>
+
+    </tr>
+</tbody>
+ </table>   
+</div>

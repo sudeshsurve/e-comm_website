@@ -1,0 +1,16 @@
+<div class="mt-5">
+    <div class="prpduct-title">
+        <h2>Add Product</h2>
+ 
+    </div>
+    <div class="text-center"><p class="text-success">{{succesmsg}}</p></div>
+    <form class="seller-form card p-4" #add_product="ngForm" (ngSubmit)="onsubmit()">
+          <input class="input-form" name="p_name" #p_name=ngModel ngModel type="text" placeholder="product Name">
+           <input class="input-form" name ='p_color' #p_color=ngModel   ngModel type="text" placeholder="color">
+           <input class="input-form" name = 'p_prize' #p_prize=ngModel  ngModel type="number" placeholder="Prize">
+           <input class="input-form" name = 'p_img'  #p_img=ngModel  ngModel type="text" placeholder="Imge Url">
+           <textarea class="input-form" name = 'p_description' ngModel type="text" placeholder="Discription" ></textarea>
+           <button class="input-button">Add</button>
+           
+       </form> 
+</div>

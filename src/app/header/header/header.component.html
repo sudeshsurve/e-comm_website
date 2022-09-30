@@ -1,0 +1,26 @@
+<div class="container-fluid">
+<nav class="nav-bar">
+<div class="logo">
+    <h1><a class="e-comm" routerLink="/">E-COMM</a></h1>
+</div>
+<div class="nav-search" *ngIf="menutype == 'default'">
+<input type="serach" placeholder="Serach Product">
+<button >serach</button>
+</div>
+<div [ngSwitch]="menutype" class="list-style">
+    <ul *ngSwitchCase="'default'">
+        <li><a routerLink="/">Home</a></li>
+        <li><a [routerLink]="'seller-auth'">Saller</a></li>
+        <li><a href="#">Cart(0)</a></li>
+        <li><a href="#">Sign in</a></li>
+    </ul>
+    <ul *ngSwitchCase="'seller'">
+        <li><a routerLink="seller-page">Product List</a></li>
+        <li><a routerLink="seller-add-product">Add product</a></li>
+        <li><a>{{sellerName | titlecase}}</a>  </li>
+        <li><a (click)="logout()">Logout</a></li>
+    </ul>
+</div>  
+</nav>
+</div>
+

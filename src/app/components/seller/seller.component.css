@@ -1,0 +1,21 @@
+::placeholder {
+ padding-left: 10px;
+ font-size: 13px;
+}
+
+.seller-text
+{
+    text-align: center  ;
+    
+}
+.seller-text h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+.toggel-text{
+    cursor: pointer ;
+    font-size: 13px;
+    text-decoration: none ;
+    text-align: right;
+}
+
