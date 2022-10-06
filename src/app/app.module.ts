@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SellerPageComponent } from './components/seller-page/seller-page.component';
 import { SellerAddProductComponent } from './components/seller-add-product/seller-add-product.component';
 import { SellerUpdateProductComponent } from './components/seller-update-product/seller-update-product.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SellerUpdateProductComponent } from './components/seller-update-product
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-  HttpClientModule
+  HttpClientModule,
+  NgbModule
 
   ],
   providers: [],
