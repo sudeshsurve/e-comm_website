@@ -65,3 +65,13 @@
     color: rgb(54, 152, 227);
     cursor: pointer;
 }
+
+.search-list{
+    position: absolute;
+    top: 45px;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #ffffff;
+    width: 300px;
+    border: 1px solid #ddd;
+}

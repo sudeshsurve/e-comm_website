@@ -1,0 +1,14 @@
+
+<div class="row d-flex  align-items-center mt-5"  *ngFor="let item of searchresult"> 
+<div class="col product-image">
+    <img [src]="item.p_img" >
+</div>
+<div class="col product-details">
+    <h5>{{item.p_name}}</h5>
+    <p>color: {{item.p_color}}</p>
+    <p>Prize : {{item.p_prize | currency :'INR'}}</p>
+    <p>description : {{item.p_description}}</p>
+</div>
+
+</div>
+
