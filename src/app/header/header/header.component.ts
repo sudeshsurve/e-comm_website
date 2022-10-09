@@ -44,7 +44,9 @@ export class HeaderComponent implements OnInit {
       console.log(elemnt.value)
       this.pservise.autofilter(elemnt.value).subscribe((res:product[])=>{
         console.log(res);
-        
+         if(res.length < 5){
+          this.searchproduct = res
+         }
         this.searchproduct = res
       })
     }
