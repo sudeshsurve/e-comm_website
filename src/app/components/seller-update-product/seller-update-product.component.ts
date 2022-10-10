@@ -49,5 +49,6 @@ export class SellerUpdateProductComponent implements OnInit {
  }, 2000);
   
  
+ this.form.reset()
   }
 }

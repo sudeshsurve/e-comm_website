@@ -17,11 +17,6 @@
       "password": "sudesh123",
       "email": "sudesh@test.com",
       "id": 4
-    },
-    {
-      "password": "",
-      "email": "",
-      "id": 5
     }
   ],
   "product": [
@@ -36,7 +31,7 @@
     {
       "p_name": "Asus s1",
       "p_color": "black",
-      "p_prize": 60000,
+      "p_prize": 60500,
       "p_img": "https://rukminim1.flixcart.com/image/312/312/l3rmzrk0/computer/s/z/r/-original-imagetgzg4pgszmt.jpeg?q=70",
       "p_description": "Intel Core i5 Processor (10th Gen)\n8 GB DDR4 RAM\nWindows 11 Operating System\n512 GB SSD\n39.62 cm (15.6 inch) Display\n1 Year Onsite Warranty",
       "id": 6
@@ -50,12 +45,28 @@
       "id": 7
     },
     {
-      "p_name": "foot ball",
-      "p_color": "orange",
-      "p_prize": 200,
+      "p_name": "XXUMA HOME-PLAY Football - Size: 1",
+      "p_color": "yellow",
+      "p_prize": 250,
       "p_img": "https://rukminim1.flixcart.com/image/612/612/ksuowi80/ball/y/z/s/400-450-5-free-kick-xx-901-5-football-xxuma-original-imag6bnzhhqd74ef.jpeg?q=70",
       "p_description": "Marman Astra Football - Size: 5\nPack of 1, Green",
       "id": 8
+    },
+    {
+      "p_name": "Apple iPhone 12 mini",
+      "p_color": "Blue",
+      "p_prize": 39990,
+      "p_img": "https://rukminim1.flixcart.com/image/312/312/kg8avm80/mobile/s/h/f/apple-iphone-12-mini-dummyapplefsn-original-imafwgbfukehtnxv.jpeg?q=70",
+      "p_description": "64 GB ROM\n13.72 cm (5.4 inch) Super Retina XDR Display\n12MP + 12MP | 12MP Front Camera\nA14 Bionic Chip with Next Generation Neural Engine Processor\nCeramic Shield\nIndustry-leading IP68 Water Resistance\nAll Screen OLED Display\n12MP TrueDepth Front Camera with Night Mode, 4K Dolby Vision HDR Recording\nBrand Warranty for 1 Year",
+      "id": 9
+    },
+    {
+      "p_name": "Apple iPhone 12 Mini",
+      "p_color": "white",
+      "p_prize": 39990,
+      "p_img": "https://rukminim1.flixcart.com/image/312/312/kg8avm80/mobile/d/g/b/apple-iphone-12-mini-dummyapplefsn-original-imafwgbfhx4cfzue.jpeg?q=70",
+      "p_description": "64 GB ROM\n13.72 cm (5.4 inch) Super Retina XDR Display\n12MP + 12MP | 12MP Front Camera\nA14 Bionic Chip with Next Generation Neural Engine Processor\nCeramic Shield\nIndustry-leading IP68 Water Resistance\nAll Screen OLED Display\n12MP TrueDepth Front Camera with Night Mode, 4K Dolby Vision HDR Recording\nBrand Warranty for 1 Year",
+      "id": 10
     }
   ]
 }

@@ -31,4 +31,8 @@ updateproduct(id:any , body:any){
   return this.http.put('http://localhost:3000/product/' + id , body)
 }
 
+autofilter(query:string){
+  return this.http.get(`http://localhost:3000/product?q=${query}`)
+}
+
 }
