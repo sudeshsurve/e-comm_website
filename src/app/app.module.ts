@@ -15,6 +15,10 @@ import { SellerUpdateProductComponent } from './components/seller-update-product
 import { SearchProductComponent } from './components/search-product/search-product.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddCartComponent } from './components/add-cart/add-cart.component';
+import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
+import { AmountPipe } from './amount.pipe';
+import { TotalAmountPipe } from './total-amount.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SellerPageComponent,
     SellerAddProductComponent,
     SellerUpdateProductComponent,
-    SearchProductComponent
+    SearchProductComponent,
+  AddCartComponent,
+  ProductdetailsComponent,
+  AmountPipe,
+  TotalAmountPipe,
+
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+.p_details h5{
+    margin-bottom: 15px;
+}
+.quntity{
+    width: 40px;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.btn-minus{
+   
+    background-color: #b02a37;
+    border: 1px solid #b02a37;
+    outline: none;
+}
+.btn-plus{
+   
+    background-color:#0a53be;
+    border: 1px solid #0a53be;
+    outline: none;
+}
+input{
+    outline: none;
+    max-height: 27px;
+    max-width: 45px;
+    
+}
+.color{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}

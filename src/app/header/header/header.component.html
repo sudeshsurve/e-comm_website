@@ -8,7 +8,7 @@
 <button (click)="search_product(searchvalue.value)">serach</button>
 <ul  class="search-list" *ngIf="searchproduct" >
     <li *ngFor="let item of searchproduct">
-        <a >{{item.p_name}}</a>
+        <a (mousedown)="redirection(item.id)">{{item.p_name}}</a>
     </li>
 </ul>
 </div>
@@ -16,7 +16,7 @@
     <ul *ngSwitchCase="'default'">
         <li><a routerLink="/">Home</a></li>
         <li><a [routerLink]="'seller-auth'">Saller</a></li>
-        <li><a href="#">Cart(0)</a></li>
+        <li><a [routerLink]="'add-cart'">Cart({{totalcount}})</a></li>
         <li><a href="#">Sign in</a></li>
     </ul>
     <ul *ngSwitchCase="'seller'">

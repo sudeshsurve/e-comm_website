@@ -1,0 +1,72 @@
+.row-line{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+input{
+    max-width: 80px;
+}
+.totalmount{
+    display: flex;
+    justify-content: end;
+}
+.empty-cart{
+    border: 1px solid #ddd;
+    width: auto;
+    height:80vh;
+}
+.tilte{
+    padding: 40px;
+}
+.cart-empty{
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+}
+.cart-button{
+    background-color:  rgb(54, 152, 227);
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    border: 1px solid  rgb(54, 152, 227);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+.input-box{
+    height: 30px;
+    width: 30px;
+    border: 2px solid rgb(91, 89, 89);
+    border-radius: 5px;
+}
+.qty{
+    display: flex;
+    justify-content: center;
+}
+.qty-details{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.btn-info{
+    width: 20px;
+    height: 30px;
+    display: flex;
+    justify-content: center
+}
+.check-out{
+    flex-basis: 100%;
+    display: grid;
+    justify-content: end;
+    grid-template-columns: repeat(2 , 8rem);
+    gap:1rem;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+b{
+    justify-self: end;
+}
+.btn-success{
+grid-column: 1 /-1;
+}
