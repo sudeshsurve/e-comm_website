@@ -37,10 +37,11 @@ if(Is){
 })
 }
   if(exist){
-  exist.qty++   
-  if(exist.qty == 2){
-    alert('you can buy only two product')
-  }
+    if(exist.qty == 2){
+      alert(`you can buy ${product.p_name} only (${exist.qty})unit`)
+      return
+    }
+    exist.qty++   
   }
   else{
     if(Is){
@@ -64,11 +65,13 @@ this.productlist.next(this.getdata())
 }
 
 removeproduct(product:any){
-  this.cartdatalist.map((a:any , index:any)=>{
+    this.cartdatalist.map((a:any , index:any)=>{
    if(product.id == a.id){
     this.cartdatalist.splice(index , 1)
    }
-  })
+  })  
+  
+ 
   this.productlist.next(this.cartdatalist)
     this.setcartdata(this.cartdatalist)
 }

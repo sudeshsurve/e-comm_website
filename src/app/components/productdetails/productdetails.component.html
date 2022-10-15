@@ -8,7 +8,7 @@
             <div class="p_details">
              <h5>{{product.p_name}}</h5>
             <h5>colour <p [style.backgroundColor]="product.p_color" class="color"></p> </h5>
-            <h5>Prize : {{product.p_prize}}</h5>
+            <h5>Prize : {{+product.p_prize * product.qty | currency :'INR' }}</h5>
             <h5>{{product.p_description}}</h5>   
             </div>  
             <div class="buttons">
@@ -17,7 +17,7 @@
             </div>
             <div >
                 <button class="btn-minus" (click)="minus()" >-</button>
-                <input class="quntity" placeholder="Q" [(ngModel)]="p_count"  >
+                <input class="quntity" placeholder="Q" value="{{product.qty}}"  >
                 <button class="btn-plus" (click)="plus()">+</button>
             </div>
             

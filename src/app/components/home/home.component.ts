@@ -26,7 +26,7 @@ this.p_servise.getproduct().subscribe((result)=>{
 })
   }
   addtocart(item:product){ 
-    console.log(item);
+    // console.log(item);
   this.addcart.addtocart(item)
 
   }

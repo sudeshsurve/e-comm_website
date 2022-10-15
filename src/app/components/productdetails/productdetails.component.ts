@@ -30,17 +30,19 @@ export class ProductdetailsComponent implements OnInit {
   }
 
   plus(){
-    if(this.p_count == 2){
-      alert('you can add only  two product')
+    if( this.product.qty ==  2){
+      alert(`you can buy ${this.product.p_name} only (${this.product.qty})unit`)
+      return
+    }
+    this.product.qty++
+  } 
+  
+  minus(){
+    this.product.qty--
+    if( this.product.qty ==  1){
+      // alert(`you can buy ${this.product.p_name} only (${this.product.qty})unit`)
       return
           }
-  this.p_count++
-  }
-  minus(){
-  if(this.p_count == 1){
-    return
-  }
-    this.p_count--
   }
 
 }

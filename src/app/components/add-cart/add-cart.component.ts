@@ -26,9 +26,18 @@ this.gettotal(this.cartproduct)
 })
   }
 
-  remove(product:any){
-    this.addtocart.removeproduct(product)
-    this.gettotal(this.cartproduct)
+  remove(product:product){
+    // console.log(index);
+    // this.cartproduct.splice(product , 1)
+    // this.addtocart.removeproduct(product)
+    // this.gettotal(this.cartproduct)
+    let data  = this.cartproduct.findIndex(res =>
+      product.id == res.id
+    ) 
+    this.cartproduct.splice(data , 1)
+    this.addtocart.setcartdata(this.cartproduct)
+    // console.log(data);
+
   }
 
 
