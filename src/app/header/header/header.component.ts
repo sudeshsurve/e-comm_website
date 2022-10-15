@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AddToCartService } from 'src/app/add-to-cart.service';
 import { product } from 'src/app/data-type';
 import { PServiceService } from 'src/app/product/p-service.service';
 
@@ -12,7 +13,8 @@ export class HeaderComponent implements OnInit {
   menutype :string ="default"
   sellerName :string =''
   searchproduct : undefined | product[]
-  constructor(private router : Router , private pservise : PServiceService) { }
+  totalcount:number = 0
+  constructor(private router : Router , private pservise : PServiceService ,public addcart : AddToCartService) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((val:any)=>{
@@ -27,11 +29,16 @@ export class HeaderComponent implements OnInit {
         // console.log(this.sellerName);
         this.menutype= "seller"
       }else{
-        console.log('outside ');
+        // console.log('outside ');
         this.menutype = "default"
       }  
       }
      
+    })
+    this.addcart.getProductData().subscribe((res:any)=>{
+      // console.log(res);
+      
+   this.totalcount =  res.length
     })
   }
   logout(){
@@ -59,6 +66,10 @@ export class HeaderComponent implements OnInit {
         this.router.navigate([`serach-product/${val}`])
       }
     }
+    redirection(id:number){
+      this.router.navigate(['/product-details/' + id])
+    }
 
+    
 
 }

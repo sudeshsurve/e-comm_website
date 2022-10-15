@@ -3,7 +3,7 @@
     <ngb-carousel *ngIf="products">
         <ng-template *ngFor="let item of products" ngbSlide>
           <div class="picsum-img-wrapper">
-            <img class="product-img" [src]="item.p_img" alt="Random first slide">
+            <a routerLink="/product-details/{{item.id}}"> <img class="product-img" [src]="item.p_img" alt="Random first slide"></a>
           </div>
           <div class="carousel-caption">
             <h3>{{item.p_name}}</h3>
@@ -14,16 +14,17 @@
 </div>
 
 <div class="containerproduct container mt-5">
-   <div class="p-card" *ngFor="let item of products" >
+   <div class="p-card" *ngFor="let item of allproduct" >
    <div class="product-image">
-    <img [src]="item.p_img">
+   <a routerLink="/product-details/{{item.id}}"> <img [src]="item.p_img"></a>
    </div>
    <div class="product-info">
     <h4>{{item.p_name}}</h4>
   <h4>{{item.p_prize | currency :'INR'}}</h4>
+  <!-- <h4>{{item.qty}}</h4> -->
    </div>
    <div class="btns">
-    <button type="button">Add to cart</button>
+    <button type="button" (click)="addtocart(item)">Add to cart</button>
    </div>
    </div>
 

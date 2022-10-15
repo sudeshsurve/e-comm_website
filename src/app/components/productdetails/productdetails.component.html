@@ -1,0 +1,26 @@
+
+<div class="container mt-5 card p-5 " *ngIf="product">
+    <div class="row d-flex justify-content-center   ">
+        <div class="col-3">
+<img src="{{product.p_img}}" class="img-fluid">
+        </div>
+        <div class="col-6">
+            <div class="p_details">
+             <h5>{{product.p_name}}</h5>
+            <h5>colour <p [style.backgroundColor]="product.p_color" class="color"></p> </h5>
+            <h5>Prize : {{product.p_prize}}</h5>
+            <h5>{{product.p_description}}</h5>   
+            </div>  
+            <div class="buttons">
+                <button  class="btn btn-primary btn-sm" (click)="addtocart(product)">Add to Cart</button>
+                <button class="btn btn-warning btn-sm">Buy Now</button>
+            </div>
+            <div >
+                <button class="btn-minus" (click)="minus()" >-</button>
+                <input class="quntity" placeholder="Q" [(ngModel)]="p_count"  >
+                <button class="btn-plus" (click)="plus()">+</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

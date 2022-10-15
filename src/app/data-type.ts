@@ -14,6 +14,6 @@ export interface product{
     p_prize:string,
     p_description:string,
     p_img:string,
-    id?:number
-
+    id?:number,
+    qty:number 
 }

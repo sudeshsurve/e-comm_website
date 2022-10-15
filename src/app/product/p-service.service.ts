@@ -18,13 +18,16 @@ getproduct(){
   return this.http.get<product[]>('http://localhost:3000/product')
 }
 
+popularproduct(){
+  return this.http.get<product[]>('http://localhost:3000/product?_limit=3')
+}
 
 remove(id:any){
   return this.http.delete('http://localhost:3000/product/' + id)
 }
 
 getsingleproduct(id:any){
-  return this.http.get('http://localhost:3000/product/' + id)
+  return this.http.get<product>('http://localhost:3000/product/' + id)
 }
 
 updateproduct(id:any , body:any){

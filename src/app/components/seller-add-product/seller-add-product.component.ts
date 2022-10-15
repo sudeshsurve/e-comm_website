@@ -30,6 +30,8 @@ setTimeout(() => {
   this.succesmsg = undefined
 }, 3000);
 this.form.reset()
+console.log('sudesh');
+
   }
 
 }
