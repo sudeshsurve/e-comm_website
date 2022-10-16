@@ -19,10 +19,10 @@ succesmsg:undefined |  string
   ngOnInit(): void {
   }
   onsubmit(){
-this.p_service.addproduct(this.form.value).subscribe((res)=>{
+this.p_service.addproduct({...this.form.value , qty:1}).subscribe((res)=>{
   console.log(res);
   
-if(res){
+if(res){  
   this.succesmsg = 'Product Add Successful' 
 }
 })

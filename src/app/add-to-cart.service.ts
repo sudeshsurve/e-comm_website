@@ -21,9 +21,12 @@ getProductData(){
   
 setproduct(product:any)
 {
-  this.cartdatalist.push(...product)
+  this.cartdatalist.push(product)
   this.productlist.next(product)
 }
+
+
+
 addtocart(product:any){
 const Is = this.getdata()
 if(Is){
@@ -51,7 +54,7 @@ if(Is){
     }
     this.cartdatalist.push(product)
     this.setcartdata(this.cartdatalist)
-    this.gettotal()
+    // this.gettotal()
   }
 }
 
@@ -65,25 +68,23 @@ this.productlist.next(this.getdata())
 }
 
 removeproduct(product:any){
-    this.cartdatalist.map((a:any , index:any)=>{
-   if(product.id == a.id){
-    this.cartdatalist.splice(index , 1)
-   }
-  })  
+  //   this.cartdatalist.map((a:any , index:any)=>{
+  //  if(product.id == a.id){
+  //   this.cartdatalist.splice(index , 1)
+  //  }
+  // })  
   
- 
-  this.productlist.next(this.cartdatalist)
-    this.setcartdata(this.cartdatalist)
+ let data = this.cartdatalist.findIndex(res =>{
+  product.id == res.id
+ })
+
+ this.cartdatalist.splice(data ,1 )
+  // this.productlist.next(this.cartdatalist)
+  //   this.setcartdata(this.cartdatalist)
 }
 
 
-gettotal(){
-  let total = 0
-  this.cartdatalist.map((a)=>{
-   total += a.p_prize
-  })  
-  return total
-}
+
 
 
 

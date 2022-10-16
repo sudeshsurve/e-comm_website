@@ -19,6 +19,7 @@ import { AddCartComponent } from './components/add-cart/add-cart.component';
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
 import { AmountPipe } from './amount.pipe';
 import { TotalAmountPipe } from './total-amount.pipe';
+import { UserLoginComponent } from './users-component/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TotalAmountPipe } from './total-amount.pipe';
   ProductdetailsComponent,
   AmountPipe,
   TotalAmountPipe,
+  UserLoginComponent,
 
   ],
   imports: [

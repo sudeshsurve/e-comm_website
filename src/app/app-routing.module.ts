@@ -9,12 +9,14 @@ import { SellerPageComponent } from './components/seller-page/seller-page.compon
 import { SellerUpdateProductComponent } from './components/seller-update-product/seller-update-product.component';
 import { SellerComponent } from './components/seller/seller.component';
 import { AuthGuard } from './seller-guard/auth.guard';
+import { UserLoginComponent } from './users-component/user-login/user-login.component';
 
 const routes: Routes = [
 {path:'' , component:HomeComponent},
 {path:'seller-auth' , component:SellerComponent},
 {path:'seller-page' , canActivate:[AuthGuard] , component:SellerPageComponent},
 {path:'add-cart' ,  component:AddCartComponent},
+{path:'user-login' ,  component:UserLoginComponent},
 {path:'serach-product/:query' , component:SearchProductComponent},
 {path:'product-details/:query' , component:ProductdetailsComponent},
 {path:'seller-add-product' , canActivate:[AuthGuard] , component:SellerAddProductComponent},

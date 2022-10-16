@@ -27,7 +27,7 @@
       "p_img": "https://rukminim1.flixcart.com/image/312/312/kp2y2kw0/computer/y/0/c/na-thin-and-light-laptop-asus-original-imag3ebnzawky4kn.jpeg?q=70",
       "p_description": "Intel Core i3 Processor (10th Gen)\n8 GB DDR4 RAM\n64 bit Windows 11 Operating System\n512 GB SSD\n39.62 cm (15.6 inch) Display\nOffice Home and Student 2021\n1 Year Onsite Warranty",
       "id": 5,
-      "qty":1
+      "qty": 1
     },
     {
       "p_name": "Asus s1",
@@ -36,8 +36,7 @@
       "p_img": "https://rukminim1.flixcart.com/image/312/312/l3rmzrk0/computer/s/z/r/-original-imagetgzg4pgszmt.jpeg?q=70",
       "p_description": "Intel Core i5 Processor (10th Gen)\n8 GB DDR4 RAM\nWindows 11 Operating System\n512 GB SSD\n39.62 cm (15.6 inch) Display\n1 Year Onsite Warranty",
       "id": 6,
-      "qty" :1
-      
+      "qty": 1
     },
     {
       "p_name": "HP",
@@ -46,7 +45,7 @@
       "p_img": "https://rukminim1.flixcart.com/image/312/312/xif0q/computer/q/j/c/-original-imagh3wecapg5gqn.jpeg?q=70",
       "p_description": "AMD Ryzen 3 Dual Core Processor\n8 GB DDR4 RAM\n64 bit Windows 11 Operating System\n256 GB SSD\n39.62 cm (15.6 mm) Display\nMicrosoft Office 2021 Home and Student, HP Documentation, HP BIOS recovery, HP Smart\n1 Year Onsite Warranty",
       "id": 7,
-      "qty" :1
+      "qty": 1
     },
     {
       "p_name": "Apple iPhone 12 mini",
@@ -55,7 +54,7 @@
       "p_img": "https://rukminim1.flixcart.com/image/312/312/kg8avm80/mobile/s/h/f/apple-iphone-12-mini-dummyapplefsn-original-imafwgbfukehtnxv.jpeg?q=70",
       "p_description": "64 GB ROM\n13.72 cm (5.4 inch) Super Retina XDR Display\n12MP + 12MP | 12MP Front Camera\nA14 Bionic Chip with Next Generation Neural Engine Processor\nCeramic Shield\nIndustry-leading IP68 Water Resistance\nAll Screen OLED Display\n12MP TrueDepth Front Camera with Night Mode, 4K Dolby Vision HDR Recording\nBrand Warranty for 1 Year",
       "id": 9,
-      "qty" :1
+      "qty": 1
     },
     {
       "p_name": "Apple iPhone 12 Mini",
@@ -64,7 +63,7 @@
       "p_img": "https://rukminim1.flixcart.com/image/312/312/kg8avm80/mobile/d/g/b/apple-iphone-12-mini-dummyapplefsn-original-imafwgbfhx4cfzue.jpeg?q=70",
       "p_description": "64 GB ROM\n13.72 cm (5.4 inch) Super Retina XDR Display\n12MP + 12MP | 12MP Front Camera\nA14 Bionic Chip with Next Generation Neural Engine Processor\nCeramic Shield\nIndustry-leading IP68 Water Resistance\nAll Screen OLED Display\n12MP TrueDepth Front Camera with Night Mode, 4K Dolby Vision HDR Recording\nBrand Warranty for 1 Year",
       "id": 10,
-      "qty" :1
+      "qty": 1
     },
     {
       "p_name": "Poco F4",
@@ -73,7 +72,30 @@
       "p_img": "https://rukminim1.flixcart.com/image/312/312/l4n2oi80/mobile/h/h/i/-original-imagfhuecztmg3gz.jpeg?q=70",
       "p_description": "8 GB RAM | 128 GB ROM\n16.94 cm (6.67 inch) Full HD+ Display\n64MP + 8MP + 2MP | 20MP Front Camera\n4500 mAh Lithium-ion Polymer Battery\nQualcomm Snapdragon 870 Processor\n2 Years Brand Warranty",
       "id": 11,
-      "qty" :1
+      "qty": 1
+    },
+    {
+      "p_name": "samsung S22 ultra 5G",
+      "p_color": "black",
+      "p_prize": 109990,
+      "p_img": "https://rukminim1.flixcart.com/image/312/312/l3khsi80/mobile/f/s/y/galaxy-s22-ultra-5g-sm-s08edrginu-sm-s908e-ds-samsung-original-imagenuuky3dbc2d.jpeg?q=70",
+      "p_description": "12 GB RAM | 256 GB ROM\n17.27 cm (6.8 inch) Display\n108MP Rear Camera\n5000 mAh Battery\n1 Year",
+      "qty": 1,
+      "id": 12
+    }
+  ],
+  "users": [
+    {
+      "name": "sudesh",
+      "email": "sudesh@gmail.com",
+      "password": "sudesh@123",
+      "id": 1
+    },
+    {
+      "name": "amit",
+      "email": "amit@gmail.com",
+      "password": "amit@123",
+      "id": 2
     }
   ]
 }

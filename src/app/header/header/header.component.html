@@ -3,7 +3,7 @@
 <div class="logo">
     <h1><a class="e-comm" routerLink="/">E-COMM</a></h1>
 </div>
-<div class="nav-search" *ngIf="menutype == 'default'">
+<div class="nav-search" *ngIf="menutype == 'default' || 'user'">
 <input #searchvalue (keyup)="autofill($event)" (blur)="searchdisable()"  type="serach" placeholder="Serach Product">
 <button (click)="search_product(searchvalue.value)">serach</button>
 <ul  class="search-list" *ngIf="searchproduct" >
@@ -17,8 +17,17 @@
         <li><a routerLink="/">Home</a></li>
         <li><a [routerLink]="'seller-auth'">Saller</a></li>
         <li><a [routerLink]="'add-cart'">Cart({{totalcount}})</a></li>
-        <li><a href="#">Sign in</a></li>
+        <li><a routerLink="user-login"> Sign in</a></li>
     </ul>
+
+    <ul *ngSwitchCase="'user'">
+        <li><a routerLink="/">Home</a></li>
+        <!-- <li><a [routerLink]="'seller-auth'">Saller</a></li> -->
+        <li><a [routerLink]="'add-cart'">Cart({{totalcount}})</a></li>
+        <li><a> {{username}}</a></li>
+        <li><a  (click)="user_logout()"> logout</a></li>
+    </ul>
+
     <ul *ngSwitchCase="'seller'">
         <li><a routerLink="seller-page">Product List</a></li>
         <li><a routerLink="seller-add-product">Add product</a></li>

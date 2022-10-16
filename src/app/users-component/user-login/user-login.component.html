@@ -1,0 +1,33 @@
+<div class="seller-signup mt-5">
+
+  <div *ngIf="!formdisplay">
+    <div  class="seller-text">
+ <h2>User Signup</h2>
+</div>
+ <form class="seller-form" #selller ="ngForm" (ngSubmit)="User_signUp(selller.value)">
+    <p class="text-danger">{{errormsg}}</p>
+        <input class="input-form" name="name" type="text" required="" ngModel placeholder="Enter Name">
+        <input class="input-form" name="email" ngModel required="" type="email" placeholder=" e-mail">
+        <input class="input-form" name = 'password' required="" ngModel type="password" placeholder="password">
+    <button class="input-button" >Sign-Up</button>
+        <a class="toggel-text mt-1" (click)="openlogin()" >Do you have account ? Login</a>
+    </form>
+  </div>  
+   
+ 
+  
+   
+
+    <div *ngIf="formdisplay">
+        <div  class="seller-text">
+            <h2>Login Form</h2>
+           </div>
+              <form class="seller-form" #selller_login ="ngForm" (ngSubmit)="user_login(selller_login.value)">
+                <p class="text-danger">{{errormsg}}</p>
+                  <input class="input-form" name="email" ngModel type="email" placeholder=" e-mail">
+                   <input class="input-form" name = 'password' ngModel type="password" placeholder="password">
+                   <button class="input-button">login</button>
+                   <a class="toggel-text mt-1" (click)="opensignup()" >Don't have account ? Sign-Up</a>
+               </form>    
+        </div>
+    </div>

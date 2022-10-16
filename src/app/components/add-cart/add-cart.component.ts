@@ -9,18 +9,18 @@ import { product } from 'src/app/data-type';
   styleUrls: ['./add-cart.component.css']
 })
 export class AddCartComponent implements OnInit {
- cartproduct : any[]=[]
+ cartproduct : any=[]
 //  allproduct:any 
  counter : number   
   constructor(private router : ActivatedRoute , public addtocart : AddToCartService) { }
 
   ngOnInit(): void {
 
+    console.log(this.cartproduct);
+    
 this.addtocart.getProductData().subscribe(res=>{
-  this.cartproduct = res
-  // this.allproduct =  this.addtocart.gettotal()
-  // console.log(this.allproduct)
-  if(this.cartproduct){
+  if(res){
+    this.cartproduct = res
 this.gettotal(this.cartproduct)
   }
 })
@@ -47,6 +47,7 @@ return product.id == x.id
     })
     if(result){
       if(result.qty == 1){
+        
         return
       }
       result.qty--
@@ -63,11 +64,11 @@ return product.id == x.id
           })
           if(result){
             if(result.qty == 2){
-              alert('you can buy only two product')
+              alert(`you  buy  ${product.p_name} only ${result.qty} product`)
               return  
             }
             result.qty++
-    this.gettotal(this.cartproduct)
+    this.gettotal(this.cartproduct) 
 
           
             // this.allproduct += result.p_prize

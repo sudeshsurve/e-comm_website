@@ -14,11 +14,11 @@ export class HeaderComponent implements OnInit {
   sellerName :string =''
   searchproduct : undefined | product[]
   totalcount:number = 0
+  username :string = ''
   constructor(private router : Router , private pservise : PServiceService ,public addcart : AddToCartService) { }
 
   ngOnInit(): void {
     this.router.events.subscribe((val:any)=>{
-      
       if(val.url){
        if(localStorage.getItem('sellers') && val.url.includes('seller')){
         let data = JSON.parse(localStorage.getItem('sellers')|| '')
@@ -28,7 +28,15 @@ export class HeaderComponent implements OnInit {
         
         // console.log(this.sellerName);
         this.menutype= "seller"
-      }else{
+      }
+      else if(localStorage.getItem('user')){
+           let userdata = localStorage.getItem('user')
+           let userstore =userdata &&  JSON.parse(userdata )[0]
+           this.username = userstore.name
+          this.menutype = "user"
+      }
+      
+      else{
         // console.log('outside ');
         this.menutype = "default"
       }  
@@ -70,6 +78,9 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['/product-details/' + id])
     }
 
-    
+    user_logout(){
+      localStorage.removeItem('user')
+      this.router.navigate(['/user-login'])
+    }
 
 }
