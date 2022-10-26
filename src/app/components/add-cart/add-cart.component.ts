@@ -1,7 +1,8 @@
 import { Component, IterableDiffers, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AddToCartService } from 'src/app/add-to-cart.service';
-import { product } from 'src/app/data-type';
+import { cart, product } from 'src/app/data-type';
+import { PServiceService } from 'src/app/product/p-service.service';
 
 @Component({
   selector: 'app-add-cart',
@@ -9,35 +10,71 @@ import { product } from 'src/app/data-type';
   styleUrls: ['./add-cart.component.css']
 })
 export class AddCartComponent implements OnInit {
- cartproduct : any=[]
+ cartproduct :any[] =[]
 //  allproduct:any 
  counter : number   
-  constructor(private router : ActivatedRoute , public addtocart : AddToCartService) { }
+  constructor(private router : ActivatedRoute , public addtocart : AddToCartService , public p_servise : PServiceService) { }
 
   ngOnInit(): void {
-
-    console.log(this.cartproduct);
+// console.log(this.cartproduct);
+// this.cartproductdata()
+this.addtocart.getProductData().subscribe((res)=>{
+ this.cartproduct = res
+  this.gettotal(this.cartproduct)
+})
+let userdata = localStorage.getItem('user')
+if(userdata){
+  let user = JSON.parse(userdata)
+ this.p_servise.getcartproduts().subscribe((res:any)=>{
+  if(res && res.body && res.body.length){
+    let cartdata = res.body
+  let data = cartdata.filter((item:cart)=> item.userId == user.id)
+  console.log(data);
+  if(data.length){
+    this.addtocart.productlist.next(data)
+  this.gettotal(data)
+  }
     
-this.addtocart.getProductData().subscribe(res=>{
+    // let data = res.body.filter((item:cart )=> item.userId == user.id)
+    
+  }
+ }) 
+}
+
+if(!userdata){
+  this.addtocart.getProductData().subscribe(res=>{
   if(res){
     this.cartproduct = res
 this.gettotal(this.cartproduct)
   }
 })
+}
+
+
+
   }
 
-  remove(product:product){
-    // console.log(index);
-    // this.cartproduct.splice(product , 1)
-    // this.addtocart.removeproduct(product)
-    // this.gettotal(this.cartproduct)
-    let data  = this.cartproduct.findIndex(res =>
-      product.id == res.id
-    ) 
-    this.cartproduct.splice(data , 1)
-    this.addtocart.setcartdata(this.cartproduct)
-    // console.log(data);
-
+  remove(id:number){
+    let localcartdata = localStorage.getItem('user')
+    if(!localcartdata){
+      console.log("localcart");
+      this.addtocart.removeproduct(id)
+    }else{
+      console.log(id);
+      
+      let userid = JSON.parse(localcartdata)
+      this.p_servise.removeproductfromcart(id).subscribe((res)=>{
+        if(res && res.body){
+          this.p_servise.getcartproduts().subscribe((res:any)=>{
+            let cartdata = res.body
+            let data = cartdata.filter((item :cart)=> item.userId == userid.id)
+            this.addtocart.productlist.next(data)
+          })
+        }
+      
+      })
+    }
+    
   }
 
 
@@ -69,13 +106,18 @@ return product.id == x.id
             }
             result.qty++
     this.gettotal(this.cartproduct) 
-
-          
-            // this.allproduct += result.p_prize
-          }
-        
-        
+        // this.allproduct += result.p_prize
+          } 
   }
+
+
+  // cartproductdata(){  
+  //     this.p_servise.getcartproduts().subscribe((res:any)=>{
+  //     if(res && res.body){
+  //      this.addtocart
+  //     }
+  //     })
+  // }
 
   gettotal(data:any){
   let num = 0

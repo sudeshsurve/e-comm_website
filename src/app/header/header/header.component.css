@@ -1,4 +1,14 @@
 
+    /* .container-fluid{
+        position: fixed;
+        top:0%;
+
+        margin-bottom: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    z-index: 1;
+    } */
+
 ::placeholder{
   font-family: sans-serif;
   font-size: 13px;

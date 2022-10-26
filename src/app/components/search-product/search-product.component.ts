@@ -16,8 +16,9 @@ searchresult : undefined | product[]
   let query =   this.rout.snapshot.paramMap.get('query')
   console.log(query);
     query && this.pservise.autofilter(query).subscribe((res: product[])=>{
+
+      
 this.searchresult = res
-console.log();
 
     })
   }

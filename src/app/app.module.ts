@@ -20,6 +20,7 @@ import { ProductdetailsComponent } from './components/productdetails/productdeta
 import { AmountPipe } from './amount.pipe';
 import { TotalAmountPipe } from './total-amount.pipe';
 import { UserLoginComponent } from './users-component/user-login/user-login.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { UserLoginComponent } from './users-component/user-login/user-login.comp
   AmountPipe,
   TotalAmountPipe,
   UserLoginComponent,
+  FooterComponent,
 
   ],
   imports: [

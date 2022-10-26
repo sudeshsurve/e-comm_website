@@ -12,7 +12,8 @@
             <h5>{{product.p_description}}</h5>   
             </div>  
             <div class="buttons">
-                <button  class="btn btn-primary btn-sm" (click)="addtocart(product)">Add to Cart</button>
+                <button  class="btn btn-primary btn-sm" *ngIf="!add_or_remove" (click)="addtocart(product)">Add to Cart</button>
+                <button  class="btn btn-danger btn-sm" *ngIf="add_or_remove"  (click)="removetocart(product.id)">Remove</button>
                 <button class="btn btn-warning btn-sm">Buy Now</button>
             </div>
             <div >
